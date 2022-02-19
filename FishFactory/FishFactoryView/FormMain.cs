@@ -48,7 +48,7 @@ namespace FishFactoryView
         }
         private void изделияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = Container.Resolve<FormCanned>();
+            var form = Container.Resolve<FormCanneds>();
             form.ShowDialog();
         }
         private void ButtonCreateOrder_Click(object sender, EventArgs e)

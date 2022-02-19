@@ -46,13 +46,13 @@ namespace FishFactoryView
                 try
                 {
                     int id = Convert.ToInt32(Canned_comboBox.SelectedValue);
-                    CannedViewModel product = _logicP.Read(new CannedBindingModel
+                    CannedViewModel canned = _logicP.Read(new CannedBindingModel
                     {
                         Id
                     = id
                     })?[0];
                     int count = Convert.ToInt32(Amount_textBox.Text);
-                    Summ_textBox.Text = (count * product?.Price ?? 0).ToString();
+                    Summ_textBox.Text = (count * canned?.Price ?? 0).ToString();
                 }
                 catch (Exception ex)
                 {
@@ -65,7 +65,7 @@ namespace FishFactoryView
         {
             CalcSum();
         }
-        private void ComboBoxProduct_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxCanned_SelectedIndexChanged(object sender, EventArgs e)
         {
             CalcSum();
         }

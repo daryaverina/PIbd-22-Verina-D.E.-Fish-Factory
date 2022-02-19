@@ -73,6 +73,7 @@ namespace FishFactoryView
             this.Canned_comboBox.Name = "Canned_comboBox";
             this.Canned_comboBox.Size = new System.Drawing.Size(188, 23);
             this.Canned_comboBox.TabIndex = 3;
+            this.Canned_comboBox.SelectedIndexChanged += new System.EventHandler(this.ComboBoxCanned_SelectedIndexChanged);
             this.Canned_comboBox.TextChanged += new System.EventHandler(this.comboBoxCars_SelectedIndexChanged);
             // 
             // Amount_textBox

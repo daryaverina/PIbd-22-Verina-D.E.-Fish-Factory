@@ -58,36 +58,36 @@ namespace FishFactoryListImplement.Implements
         }
         public void Insert(CannedBindingModel model)
         {
-            var tempProduct = new Canned
+            var tempCanned = new Canned
             {
                 Id = 1,
                 CannedComponents = new
             Dictionary<int, int>()
             };
-            foreach (var product in source.Canneds)
+            foreach (var canned in source.Canneds)
             {
-                if (product.Id >= tempProduct.Id)
+                if (canned.Id >= tempCanned.Id)
                 {
-                    tempProduct.Id = product.Id + 1;
+                    tempCanned.Id = canned.Id + 1;
                 }
             }
-            source.Canneds.Add(CreateModel(model, tempProduct));
+            source.Canneds.Add(CreateModel(model, tempCanned));
         }
         public void Update(CannedBindingModel model)
         {
-            Canned tempProduct = null;
-            foreach (var product in source.Canneds)
+            Canned tempCanned = null;
+            foreach (var canned in source.Canneds)
             {
-                if (product.Id == model.Id)
+                if (canned.Id == model.Id)
                 {
-                    tempProduct = product;
+                    tempCanned = canned;
                 }
             }
-            if (tempProduct == null)
+            if (tempCanned == null)
             {
                 throw new Exception("Элемент не найден");
             }
-            CreateModel(model, tempProduct);
+            CreateModel(model, tempCanned);
         }
         public void Delete(CannedBindingModel model)
         {
@@ -102,38 +102,38 @@ namespace FishFactoryListImplement.Implements
             throw new Exception("Элемент не найден");
         }
         private static Canned CreateModel(CannedBindingModel model, Canned
-        product)
+        canned)
         {
-            product.CannedName = model.CannedName;
-            product.Price = model.Price;
+            canned.CannedName = model.CannedName;
+            canned.Price = model.Price;
             // удаляем убранные
-            foreach (var key in product.CannedComponents.Keys.ToList())
+            foreach (var key in canned.CannedComponents.Keys.ToList())
             {
                 if (!model.CannedComponents.ContainsKey(key))
                 {
-                    product.CannedComponents.Remove(key);
+                    canned.CannedComponents.Remove(key);
                 }
             }
             // обновляем существуюущие и добавляем новые
             foreach (var component in model.CannedComponents)
             {
-                if (product.CannedComponents.ContainsKey(component.Key))
+                if (canned.CannedComponents.ContainsKey(component.Key))
                 {
-                    product.CannedComponents[component.Key] =
+                    canned.CannedComponents[component.Key] =
                     model.CannedComponents[component.Key].Item2;
                 }
                 else
                 {
-                    product.CannedComponents.Add(component.Key,
+                    canned.CannedComponents.Add(component.Key,
                     model.CannedComponents[component.Key].Item2);
                 }
             }
-            return product;
+            return canned;
         }
         private CannedViewModel CreateModel(Canned canned)
         {
             // требуется дополнительно получить список компонентов для изделия с названиями и их количество
-        var productComponents = new Dictionary<int, (string, int)>();
+        var canedComponents = new Dictionary<int, (string, int)>();
             foreach (var pc in canned.CannedComponents)
             {
                 string componentName = string.Empty;
@@ -145,14 +145,14 @@ namespace FishFactoryListImplement.Implements
                         break;
                     }
                 }
-                productComponents.Add(pc.Key, (componentName, pc.Value));
+                canedComponents.Add(pc.Key, (componentName, pc.Value));
             }
             return new CannedViewModel
             {
                 Id = canned.Id,
                 CannedName = canned.CannedName,
                 Price = canned.Price,
-                CannedComponents = productComponents
+                CannedComponents = canedComponents
             };
         }
     }

@@ -197,7 +197,7 @@ namespace FishFactoryView
             this.Controls.Add(this.Price_label);
             this.Name = "FormCanned";
             this.Text = "FormCanned";
-            this.Load += new System.EventHandler(this.FormProduct_Load);
+            this.Load += new System.EventHandler(this.FormCanned_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Components_dataGridView)).EndInit();
             this.Components_groupBox.ResumeLayout(false);
             this.ResumeLayout(false);

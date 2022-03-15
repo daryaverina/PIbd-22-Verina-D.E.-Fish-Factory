@@ -1,5 +1,4 @@
 ﻿using FishFactoryContracts.Enums;
-using FishFactoryFileImplement.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +7,9 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using FishFactoryFileImplement_.Models;
 
-namespace FishFactoryFileImplement
+namespace FishFactoryFileImplement_
 {
     public class FileDataListSingleton
     {
@@ -77,7 +77,7 @@ namespace FishFactoryFileImplement
                 DateTime? dateImplement;
                 foreach (var elem in xElements)
                 {
-                    Enum.TryParse<OrderStatus>(elem.Element("Status").Value, out status);
+                    Enum.TryParse(elem.Element("Status").Value, out status);
                     dateImplement = null;
                     if (elem.Element("DateImplement").Value != "")
                     {

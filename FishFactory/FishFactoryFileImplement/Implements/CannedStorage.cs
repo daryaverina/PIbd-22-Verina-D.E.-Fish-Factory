@@ -1,11 +1,12 @@
 ﻿using FishFactoryContracts.BindingModels;
 using FishFactoryContracts.StoragesContracts;
 using FishFactoryContracts.ViewModels;
-using FishFactoryFileImplement.Models;
+using FishFactoryFileImplement_;
+using FishFactoryFileImplement_.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-namespace FishFactoryFileImplement.Implements
+namespace FishFactoryFileImplement_.Implements
 {
     public class CannedStorage : ICannedStorage
     {

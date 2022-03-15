@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FishFactoryFileImplement.Models
+namespace FishFactoryFileImplement_.Models
 {
     /// Компонент, требуемый для изготовления изделия
     public class Component

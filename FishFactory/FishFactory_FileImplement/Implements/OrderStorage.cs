@@ -8,7 +8,7 @@ using FishFactoryContracts.StoragesContracts;
 using FishFactoryContracts.ViewModels;
 using FishFactory_FileImplement.Models;
 
-namespace FishFactoryFileImplement_.Implements
+namespace FishFactory_FileImplement.Implements
 {
     public class OrderStorage : IOrderStorage
     {

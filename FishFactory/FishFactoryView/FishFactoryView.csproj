@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
@@ -11,8 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FishFactoryBusinessLogic\FishFactoryBusinessLogic.csproj" />
+    <ProjectReference Include="..\FishFactoryContracts\FishFactoryContracts.csproj" />
     <ProjectReference Include="..\FishFactoryListImplement\FishFactoryListImplement.csproj" />
+    <ProjectReference Include="..\FishFactory_FileImplement\FishFactory_FileImplement.csproj" />
   </ItemGroup>
 
 </Project>

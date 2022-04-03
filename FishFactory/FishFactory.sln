@@ -5,13 +5,13 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryView", "FishFactoryView\FishFactoryView.csproj", "{2A7F796F-D63C-4141-831C-5FA238459531}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryBusinessLogic", "FishFactoryBusinessLogic\FishFactoryBusinessLogic.csproj", "{38A2A6EC-E122-40E3-884B-D0C2667DEBCB}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryContracts", "FishFactoryContracts\FishFactoryContracts.csproj", "{E89D27AE-B582-4542-94BB-6BDEFBCEE16D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryListImplement", "FishFactoryListImplement\FishFactoryListImplement.csproj", "{13B753EB-4D32-4FBF-ACB7-006BE3A39F64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishFactory_FileImplement", "FishFactory_FileImplement\FishFactory_FileImplement.csproj", "{93B303E6-0E78-4A82-A0A8-0847264EC535}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactory_FileImplement", "FishFactory_FileImplement\FishFactory_FileImplement.csproj", "{93B303E6-0E78-4A82-A0A8-0847264EC535}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishFactoryBusinessLogic.cs", "FishFactoryBusinessLogic.cs\FishFactoryBusinessLogic.cs.csproj", "{26208C9B-E7A5-4FB8-B230-5F9C672A6D5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{2A7F796F-D63C-4141-831C-5FA238459531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A7F796F-D63C-4141-831C-5FA238459531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A7F796F-D63C-4141-831C-5FA238459531}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38A2A6EC-E122-40E3-884B-D0C2667DEBCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38A2A6EC-E122-40E3-884B-D0C2667DEBCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38A2A6EC-E122-40E3-884B-D0C2667DEBCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38A2A6EC-E122-40E3-884B-D0C2667DEBCB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E89D27AE-B582-4542-94BB-6BDEFBCEE16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E89D27AE-B582-4542-94BB-6BDEFBCEE16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E89D27AE-B582-4542-94BB-6BDEFBCEE16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{93B303E6-0E78-4A82-A0A8-0847264EC535}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93B303E6-0E78-4A82-A0A8-0847264EC535}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93B303E6-0E78-4A82-A0A8-0847264EC535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26208C9B-E7A5-4FB8-B230-5F9C672A6D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26208C9B-E7A5-4FB8-B230-5F9C672A6D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26208C9B-E7A5-4FB8-B230-5F9C672A6D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26208C9B-E7A5-4FB8-B230-5F9C672A6D5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,8 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FishFactoryContracts\FishFactoryContracts.csproj" />
-    <ProjectReference Include="..\FishFactoryListImplement\FishFactoryListImplement.csproj" />
     <ProjectReference Include="..\FishFactory_FileImplement\FishFactory_FileImplement.csproj" />
   </ItemGroup>
 

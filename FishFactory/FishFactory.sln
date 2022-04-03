@@ -5,13 +5,13 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryView", "FishFactoryView\FishFactoryView.csproj", "{2A7F796F-D63C-4141-831C-5FA238459531}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryContracts", "FishFactoryContracts\FishFactoryContracts.csproj", "{E89D27AE-B582-4542-94BB-6BDEFBCEE16D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryListImplement", "FishFactoryListImplement\FishFactoryListImplement.csproj", "{13B753EB-4D32-4FBF-ACB7-006BE3A39F64}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactory_FileImplement", "FishFactory_FileImplement\FishFactory_FileImplement.csproj", "{93B303E6-0E78-4A82-A0A8-0847264EC535}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishFactoryBusinessLogic.cs", "FishFactoryBusinessLogic.cs\FishFactoryBusinessLogic.cs.csproj", "{26208C9B-E7A5-4FB8-B230-5F9C672A6D5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishFactoryBusinessLogic", "FishFactoryBusinessLogic.cs\FishFactoryBusinessLogic.csproj", "{26208C9B-E7A5-4FB8-B230-5F9C672A6D5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishFactoryContracts", "FishFactoryContracts.cs\FishFactoryContracts.csproj", "{9C36E034-5683-4155-9134-270B9F60A2A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishFactoryListImplement", "FishFactoryListImplement.cs\FishFactoryListImplement.csproj", "{7820B331-25E2-472A-9DDF-C2FC7D286996}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,14 +23,6 @@ Global
 		{2A7F796F-D63C-4141-831C-5FA238459531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A7F796F-D63C-4141-831C-5FA238459531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A7F796F-D63C-4141-831C-5FA238459531}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E89D27AE-B582-4542-94BB-6BDEFBCEE16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E89D27AE-B582-4542-94BB-6BDEFBCEE16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E89D27AE-B582-4542-94BB-6BDEFBCEE16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E89D27AE-B582-4542-94BB-6BDEFBCEE16D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{13B753EB-4D32-4FBF-ACB7-006BE3A39F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13B753EB-4D32-4FBF-ACB7-006BE3A39F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13B753EB-4D32-4FBF-ACB7-006BE3A39F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13B753EB-4D32-4FBF-ACB7-006BE3A39F64}.Release|Any CPU.Build.0 = Release|Any CPU
 		{93B303E6-0E78-4A82-A0A8-0847264EC535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{93B303E6-0E78-4A82-A0A8-0847264EC535}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93B303E6-0E78-4A82-A0A8-0847264EC535}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +31,14 @@ Global
 		{26208C9B-E7A5-4FB8-B230-5F9C672A6D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26208C9B-E7A5-4FB8-B230-5F9C672A6D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26208C9B-E7A5-4FB8-B230-5F9C672A6D5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C36E034-5683-4155-9134-270B9F60A2A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C36E034-5683-4155-9134-270B9F60A2A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C36E034-5683-4155-9134-270B9F60A2A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C36E034-5683-4155-9134-270B9F60A2A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7820B331-25E2-472A-9DDF-C2FC7D286996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7820B331-25E2-472A-9DDF-C2FC7D286996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7820B331-25E2-472A-9DDF-C2FC7D286996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7820B331-25E2-472A-9DDF-C2FC7D286996}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -14,7 +14,7 @@
     <ProjectReference Include="..\FishFactoryBusinessLogic.cs\FishFactoryBusinessLogic.csproj" />
     <ProjectReference Include="..\FishFactoryContracts.cs\FishFactoryContracts.csproj" />
     <ProjectReference Include="..\FishFactoryListImplement.cs\FishFactoryListImplement.csproj" />
-    <ProjectReference Include="..\FishFactory_FileImplement\FishFactoryFileImplement.csproj" />
+    <ProjectReference Include="..\FishFactory_FileImplement\FishFactoryFileImplement_.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,12 +1,12 @@
 ﻿using FishFactoryContracts.BindingModels;
 using FishFactoryContracts.StoragesContracts;
 using FishFactoryContracts.ViewModels;
-using FishFactory_FileImplement;
-using FishFactory_FileImplement.Models;
+using FishFactoryFileImplement;
+using FishFactoryFileImplement.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-namespace FishFactory_FileImplement.Implements
+namespace FishFactoryFileImplement.Implements
 {
     public class ComponentStorage : IComponentStorage
     {

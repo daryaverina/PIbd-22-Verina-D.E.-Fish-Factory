@@ -1,7 +1,8 @@
 using FishFactoryBusinessLogic.BusinessLogics;
 using FishFactoryContracts.BusinessLogicsContracts;
 using FishFactoryContracts.StoragesContracts;
-using FishFactoryListImplement.Implements;
+using FishFactoryFileImplement.Implements;
+using FishFactoryFileImplement;
 using System;
 using System.Windows.Forms;
 using Unity;
@@ -33,6 +34,7 @@ namespace FishFactoryView
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(Container.Resolve<FormMain>());
+            FileDataListSingleton.Save();
         }
         private static IUnityContainer BuildUnityContainer()
         {

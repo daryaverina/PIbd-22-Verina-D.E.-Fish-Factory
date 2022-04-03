@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using FishFactoryContracts.BindingModels;
 using FishFactoryContracts.StoragesContracts;
 using FishFactoryContracts.ViewModels;
-using FishFactory_FileImplement.Models;
+using FishFactoryFileImplement.Models;
 
-namespace FishFactory_FileImplement.Implements
+namespace FishFactoryFileImplement.Implements
 {
     public class OrderStorage : IOrderStorage
     {

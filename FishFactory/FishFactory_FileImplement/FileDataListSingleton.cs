@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-using FishFactory_FileImplement.Models;
+using FishFactoryFileImplement.Models;
 
-namespace FishFactory_FileImplement
+namespace FishFactoryFileImplement
 {
     public class FileDataListSingleton
     {

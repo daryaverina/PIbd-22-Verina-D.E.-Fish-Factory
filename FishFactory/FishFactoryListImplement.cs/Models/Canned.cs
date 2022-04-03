@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FishFactoryFileImplement.Models
+namespace FishFactoryListImplement.Models
 {
     /// Изделие, изготавливаемое в магазине
     public class Canned

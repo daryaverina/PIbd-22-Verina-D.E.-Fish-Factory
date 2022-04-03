@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryView", "FishFactoryView\FishFactoryView.csproj", "{2A7F796F-D63C-4141-831C-5FA238459531}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryFileImplement", "FishFactory_FileImplement\FishFactoryFileImplement.csproj", "{93B303E6-0E78-4A82-A0A8-0847264EC535}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryFileImplement_", "FishFactory_FileImplement\FishFactoryFileImplement_.csproj", "{93B303E6-0E78-4A82-A0A8-0847264EC535}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryBusinessLogic", "FishFactoryBusinessLogic.cs\FishFactoryBusinessLogic.csproj", "{26208C9B-E7A5-4FB8-B230-5F9C672A6D5D}"
 EndProject

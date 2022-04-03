@@ -1,6 +1,6 @@
 ﻿namespace FishFactory_FileImplement
 {
-    public class Class1
+    public class FileDataListSingleton
     {
     }
 }

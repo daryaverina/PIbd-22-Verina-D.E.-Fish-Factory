@@ -35,18 +35,24 @@ namespace FishFactoryDatabaseImplement.Implements
                 return null;
             }
             using var context = new FishFactoryDatabase();
-            return context.Orders.Include(rec => rec.Canned).Where(rec => rec.CannedId == model.CannedId).Select(rec => new OrderViewModel
-            {
-                Id = rec.Id,
-                CannedId = rec.CannedId,
-                CannedName = rec.Canned.CannedName,
-                Count = rec.Count,
-                Sum = rec.Sum,
-                Status = rec.Status.ToString(),
-                DateCreate = rec.DateCreate,
-                DateImplement = rec.DateImplement
-            }).ToList();
+            return context.Orders
+                .Include(rec => rec.Canned)
+                .Where(rec => rec.Id.Equals(model.Id)
+                || rec.DateCreate >= model.DateFrom
+                && rec.DateCreate <= model.DateTo)
+                .Select(rec => new OrderViewModel
+                {
+                    Id = rec.Id,
+                    CannedId = rec.CannedId,
+                    CannedName = rec.Canned.CannedName,
+                    Count = rec.Count,
+                    Sum = rec.Sum,
+                    Status = rec.Status.ToString(),
+                    DateCreate = rec.DateCreate,
+                    DateImplement = rec.DateImplement
+                }).ToList();
         }
+
         public OrderViewModel GetElement(OrderBindingModel model)
         {
             if (model == null)
@@ -54,7 +60,7 @@ namespace FishFactoryDatabaseImplement.Implements
                 return null;
             }
             using var context = new FishFactoryDatabase();
-            var order = context.Orders.FirstOrDefault(rec => rec.Id == model.Id);
+            var order = context.Orders.Include(rec => rec.Canned).FirstOrDefault(rec => rec.Id == model.Id);
             return order != null ? CreateModel(order, context) : null;
         }
         public void Insert(OrderBindingModel model)
@@ -99,13 +105,13 @@ namespace FishFactoryDatabaseImplement.Implements
             order.DateImplement = model.DateImplement;
             return order;
         }
-        public OrderViewModel CreateModel(Order order, FishFactoryDatabase context)
+        private static OrderViewModel CreateModel(Order order, FishFactoryDatabase context)
         {
             return new OrderViewModel
             {
                 Id = order.Id,
                 CannedId = order.CannedId,
-                CannedName = context.Canneds.FirstOrDefault(rec => rec.Id == order.CannedId)?.CannedName,
+                CannedName = order.Canned.CannedName,
                 Count = order.Count,
                 Sum = order.Sum,
                 Status = order.Status.ToString(),

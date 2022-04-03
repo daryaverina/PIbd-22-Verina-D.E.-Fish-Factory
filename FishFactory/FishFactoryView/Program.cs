@@ -1,12 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using FishFactoryBusinessLogic.BusinessLogics;
 using FishFactoryContracts.BusinessLogicsContracts;
 using FishFactoryContracts.StoragesContracts;
-using System;
-using System.Windows.Forms;
+using FishFactoryDatabaseImplement.Implements;
+using FishFactoryBusinessLogic.OfficePackage;
+using FishFactoryBusinessLogic.OfficePackage.Implements;
 using Unity;
 using Unity.Lifetime;
-using FishFactoryDatabaseImplement.Implements;
-using FishFactoryFileImplement_;
 
 namespace FishFactoryView
 {
@@ -45,6 +49,10 @@ namespace FishFactoryView
             currentContainer.RegisterType<IComponentLogic, ComponentLogic>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<IOrderLogic, OrderLogic>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<ICannedLogic, CannedLogic>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IReportLogic, ReportLogic>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<AbstractSaveToExcel, SaveToExcel>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<AbstractSaveToPdf, SaveToPdf>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<AbstractSaveToWord, SaveToWord>(new HierarchicalLifetimeManager());
             return currentContainer;
         }
     }

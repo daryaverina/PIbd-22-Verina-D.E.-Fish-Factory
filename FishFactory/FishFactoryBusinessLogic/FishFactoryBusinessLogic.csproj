@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.16.0" />
+    <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1003" />
+    <PackageReference Include="PDFsharp-MigraDoc-GDI" Version="1.51.5186-beta" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FishFactoryContracts\FishFactoryContracts.csproj" />
   </ItemGroup>
 

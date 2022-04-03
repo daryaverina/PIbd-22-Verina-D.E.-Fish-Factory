@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryListImplement", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryFileImplement", "FishFactoryFileImplement\FishFactoryFileImplement.csproj", "{724C22B6-064B-4257-B611-BFB4594EAE0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishFactoryDatabaseImplement", "FishFactoryDatabaseImplement\FishFactoryDatabaseImplement.csproj", "{28488153-70EC-4690-B0EF-23712BC88F0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishFactoryDatabaseImplement", "FishFactoryDatabaseImplement\FishFactoryDatabaseImplement.csproj", "{28488153-70EC-4690-B0EF-23712BC88F0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

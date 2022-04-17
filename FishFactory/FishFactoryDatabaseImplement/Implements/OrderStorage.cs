@@ -9,6 +9,7 @@ using FishFactoryContracts.ViewModels;
 using FishFactoryDatabaseImplement.Models;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace FishFactoryDatabaseImplement.Implements
 {
     public class OrderStorage : IOrderStorage
@@ -34,16 +35,19 @@ namespace FishFactoryDatabaseImplement.Implements
             {
                 return null;
             }
+
             using var context = new FishFactoryDatabase();
-            return context.Orders
-                .Include(rec => rec.Canned)
-                .Where(rec => rec.Id.Equals(model.Id)
-                || rec.DateCreate >= model.DateFrom
-                && rec.DateCreate <= model.DateTo)
-                .Select(rec => new OrderViewModel
+
+            return context.Orders.Include(rec => rec.Canned).Include(rec => rec.Client)
+                .Where(rec => rec.CannedId == model.CannedId ||
+                (model.DateFrom.HasValue && model.DateTo.HasValue &&
+                rec.DateCreate >= model.DateFrom && rec.DateCreate <= model.DateTo) ||
+                model.ClientId.HasValue && rec.ClientId == model.ClientId).Select(rec => new OrderViewModel
                 {
                     Id = rec.Id,
                     CannedId = rec.CannedId,
+                    ClientId = rec.ClientId,
+                    ClientFIO = rec.Client.ClientFIO,
                     CannedName = rec.Canned.CannedName,
                     Count = rec.Count,
                     Sum = rec.Sum,
@@ -51,6 +55,7 @@ namespace FishFactoryDatabaseImplement.Implements
                     DateCreate = rec.DateCreate,
                     DateImplement = rec.DateImplement
                 }).ToList();
+
         }
 
         public OrderViewModel GetElement(OrderBindingModel model)

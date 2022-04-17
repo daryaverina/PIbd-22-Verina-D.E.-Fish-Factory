@@ -1,5 +1,11 @@
-﻿using FishFactoryDatabaseImplement.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using FishFactoryDatabaseImplement.Models;
 using Microsoft.EntityFrameworkCore;
+
 namespace FishFactoryDatabaseImplement
 {
     public class FishFactoryDatabase : DbContext
@@ -12,9 +18,11 @@ namespace FishFactoryDatabaseImplement
             }
             base.OnConfiguring(optionsBuilder);
         }
+
         public virtual DbSet<Component> Components { set; get; }
         public virtual DbSet<Canned> Canneds { set; get; }
         public virtual DbSet<CannedComponent> CannedComponents { set; get; }
         public virtual DbSet<Order> Orders { set; get; }
+        public virtual DbSet<Client> Clients { set; get; }
     }
 }
